@@ -18,11 +18,12 @@ form.addEventListener('submit', (e) => {
     addTodo()
 })
 
-// add todo function
+// addTodo function
 function addTodo(todo) {
     // todoText is value of the text inputed by the user
     let todoText = input.value
 
+    // if todo gets passed in, then set todoText to todo.text
     if(todo) {
         todoText = todo.text
     }
@@ -35,6 +36,7 @@ function addTodo(todo) {
             todoEl.classList.add('completed')
         }
 
+        // setting innerText to whatever todoText is
         todoEl.innerText = todoText
 
         // complete todo with left click
